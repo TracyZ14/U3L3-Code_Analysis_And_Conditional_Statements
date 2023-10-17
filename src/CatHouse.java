@@ -1,3 +1,5 @@
+import java.io.*;
+import java.util.*;
 public class CatHouse
 {
     private Cat cat1;
@@ -22,8 +24,16 @@ public class CatHouse
             cat1.introduce();
             cat2.introduce();
         }
-        if(cat1.getAge() == cat2.getAge())
+        else if(cat1.getAge() == cat2.getAge())
         {
+            String catNames[]
+                    = {cat1.getName(), cat2.getName()};
+            Arrays.sort(catNames);
+            if(cat1.getName() == catNames[0])
+            {
+                cat1.introduce();
+                cat2.introduce();
+            }
             if(cat1.getName() == cat2.getName())
             {
                 cat1.introduce();
@@ -43,6 +53,8 @@ public class CatHouse
     public void catNoise()
     {
         /* implement me! */
+        cat1.speak();
+        cat2.speak();
     }
 
     // MODIFY this so that it prints each Cat's age next to its name
@@ -50,8 +62,8 @@ public class CatHouse
     public String toString()
     {
         String str = "Welcome to " + owner + "'s Cat House!\n";
-        str += "Cat 1's Name: " + cat1.getName() + "\n";
-        str += "Cat 2's Name: " + cat2.getName();
+        str += "Cat 1's Name: " + cat1.getName() + ", " + cat1.getAge() +"\n";
+        str += "Cat 2's Name: " + cat2.getName() + ", " + cat2.getAge();
 
         return str;
     }
