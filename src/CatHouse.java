@@ -34,7 +34,12 @@ public class CatHouse
                 cat1.introduce();
                 cat2.introduce();
             }
-            if(cat1.getName() == cat2.getName())
+            else if(cat2.getName() == catNames[0])
+            {
+                cat2.introduce();
+                cat1.introduce();
+            }
+            else if(cat1.getName() == cat2.getName())
             {
                 cat1.introduce();
                 cat2.introduce();
@@ -53,8 +58,8 @@ public class CatHouse
     public void catNoise()
     {
         /* implement me! */
-        cat1.speak();
-        cat2.speak();
+        System.out.println(cat1.speak());
+        System.out.println(cat2.speak());
     }
 
     // MODIFY this so that it prints each Cat's age next to its name

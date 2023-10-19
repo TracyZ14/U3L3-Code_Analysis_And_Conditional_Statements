@@ -27,12 +27,12 @@ public class Cat
     // Each message should have equal chance of being returned.
     public String speak()
     {
-        double catSounds = 1 + Math.random() * 3;
-        if (catSounds == 1.0)
+        double catSounds = (int) (1 + Math.random() * 3);
+        if (catSounds == 1)
         {
             return "meow!";
         }
-        if(catSounds == 2.0)
+        if(catSounds == 2)
         {
             return "purr";
         }
