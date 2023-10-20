@@ -48,11 +48,16 @@ public class Main {
         }
         else if(command.equals("e"))
         {
-            System.out.println("You find that the path leads to a beach shack. \nYou see that there is a boat with oars by the beach shack, and there is a bed in the beach shack. \nShould you try to leave the island on the boat or rest in the beach shack (b, r)");
-        }
-        else if(command.equals("w"))
-        {
-
+            System.out.println("You find that the path leads to a beach shack. \nYou see that there is a boat with oars by the beach shack, and there is a bed in the beach shack. \nShould you try to leave the island on the boat or rest in the beach shack (b, r)?");
+            String action = scan.nextLine();
+            if(action.equals("b"))
+            {
+                System.out.println("You tried to row the boat in a random direction. \nUnfortunately, you encountered a storm in the sea and shipwrecked. \nBut fortunately, a passing ship found you and rescued you.");
+            }
+            if(action.equals("r"))
+            {
+                System.out.println("You decided to rest in the beach shack. \nTo your surprise, you found a radio by the bedside. \nUnfortunately, you realized that the radio had ran out of batteries. \nDisappointed, you decided to live in the beach shack. \nAfter an unknown amount of time, the owner of the beach shack finally came to the beach shack, found you, and rescued you.");
+            }
         }
         else
         {
